@@ -148,6 +148,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+        Mbarwick83\TwitterApi\TwitterApiServiceProvider::class,
 
     ],
 
@@ -200,6 +201,7 @@ return [
         'APIRoute'  => Dingo\Api\Facade\Route::class,
         'API'       => Dingo\Api\Facade\API::class,
         'JWTAuth'   => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'TwitterApi'    => Mbarwick83\TwitterApi\Facades\TwitterApi::class,
     ],
 
 ];
