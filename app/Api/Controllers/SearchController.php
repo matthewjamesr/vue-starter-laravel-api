@@ -28,9 +28,8 @@ class SearchController extends BaseController
      */
     public function index()
     {
-        $place = $this->twitter->get("geo/reverse_geocode", ["lat" => "-122.41893768310548", "long" => "37.77397129533325", "granularity" => "city"]);
-        //$query = $this->twitter->get("search/tweets", ["q" => "protest", "result_type" => "recent"]);
-        return json_encode($place);
+        $query = $this->twitter->get("search/tweets", ["q" => "protest", "geocode" => "38.6532137,-90.3135015,10mi", "result_type" => "recent"]);
+        return json_encode($query);
     }
 
 }
