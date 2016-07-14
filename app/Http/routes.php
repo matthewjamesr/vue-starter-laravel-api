@@ -10,8 +10,6 @@ $api->version('v1', function ($api) {
 		// Login route
 		$api->post('login', 'AuthController@authenticate');
 		$api->post('register', 'AuthController@register');
-		
-		$api->get('/search', 'SearchController@index');
 
 		// Dogs! All routes in here are protected and thus need a valid token
 		//$api->group( [ 'protected' => true, 'middleware' => 'jwt.refresh' ], function ($api) {
@@ -26,6 +24,7 @@ $api->version('v1', function ($api) {
 			$api->delete('dogs/{id}', 'DogsController@destroy');
 			$api->put('dogs/{id}', 'DogsController@update');
 
+			$api->get('/search', 'SearchController@index');
 		});
 
 	});
